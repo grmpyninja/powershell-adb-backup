@@ -39,7 +39,7 @@ $to_backup = $packages | ?{ $_.Package.StartsWith("com.google.android") }
 
 If some files got `size==0` there is an easy way to list those packages using the following code and try to backup them again
 
-```
+```ps1
 $broken_ab_files = get_empty_ab $back_dir
 backup $broken_ab_files $back_dir $adb_dir
 ```
